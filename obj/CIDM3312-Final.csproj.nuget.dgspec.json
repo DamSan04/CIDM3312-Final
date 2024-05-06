@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final\\CIDM3312-Final.csproj": {}
+    "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final-1\\CIDM3312-Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final\\CIDM3312-Final.csproj": {
+    "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final-1\\CIDM3312-Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final\\CIDM3312-Final.csproj",
+        "projectUniqueName": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final-1\\CIDM3312-Final.csproj",
         "projectName": "CIDM3312-Final",
-        "projectPath": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final\\CIDM3312-Final.csproj",
+        "projectPath": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final-1\\CIDM3312-Final.csproj",
         "packagesPath": "C:\\Users\\damia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final\\obj\\",
+        "outputPath": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final-1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config"

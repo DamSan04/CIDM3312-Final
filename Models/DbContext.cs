@@ -8,6 +8,7 @@ namespace CIDM3312_Final.Models
             :base(options)
             {
             }
+            public DbSet<Team> Team { get; set; } = default!;
             public DbSet<Player> Player {get; set;} = default!;
     }
 }

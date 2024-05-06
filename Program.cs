@@ -6,8 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<PlayerContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("PlayerContext")));
-builder.Services.AddDbContext<TeamContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("TeamContext")));
+
 
 
 
