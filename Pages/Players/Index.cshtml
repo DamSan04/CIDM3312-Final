@@ -1,0 +1,67 @@
+@page
+@model CIDM3312_Final.Pages.Players.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].PlayerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].KDRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].AvgCombatScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player[0].Team)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Player) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KDRatio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgCombatScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team.TeamID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PlayerId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PlayerId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PlayerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

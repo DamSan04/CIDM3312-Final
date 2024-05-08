@@ -1,0 +1,28 @@
+@page
+@model TeamsModel
+@{
+<table class="table">
+    <thread>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">TeamName</th>
+            <th scope="col">Region</th>
+            <th scope="col">Win/Loss</th>
+            <th scope="col">Ranking</th>
+        </tr>
+    </thread> 
+    <tbody>
+        @foreach (var t in Model.Teams) 
+        {
+        <tr>
+            <th scope="row"></th>
+        <td>@Html.DisplayFor(modelItem => t.TeamName)</td>
+        <td>@Html.DisplayFor(modelItem => t.Region)</td>
+        <td>@Html.DisplayFor(modelItem => t.WinLoss)</td>
+        <td>@Html.DisplayFor(modelItem => t.Ranking)</td>
+        </tr>    
+        }
+    </tbody>    
+</table>
+
+}

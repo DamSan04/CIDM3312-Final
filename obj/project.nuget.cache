@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bgnE8AspfEBaj0IwYQlvvilfaZ4Vp04TgtnB68W2giWI1v5y0QKZABp0oRDm/6RbFTzCLUt30AVNEdIPFGuYlw==",
+  "dgSpecHash": "wVX8HIcbCM/BCrc9begaIdx5KfhcX2rFqMprNjFIgToq07Abd5OuXn3N6YLD48NZReXgik+RCcsL+oKnsxsnFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\damia\\Documents\\CIDM 3312\\CIDM3312-Final-1\\CIDM3312-Final.csproj",
   "expectedPackageFiles": [
@@ -85,6 +85,7 @@
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.4\\microsoft.entityframeworkcore.sqlite.8.0.4.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.4\\microsoft.entityframeworkcore.sqlite.core.8.0.4.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.4\\microsoft.entityframeworkcore.sqlserver.8.0.4.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.4\\microsoft.entityframeworkcore.tools.8.0.4.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
