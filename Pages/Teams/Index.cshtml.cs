@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using CIDM3312_Final.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace CIDM3312_Final.Pages;
+namespace CIDM3312_Final.Pages.Teams;
 
 
-public class TeamsModel : PageModel
+public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
 
-    public TeamsModel(ILogger<IndexModel> logger)
+    public IndexModel(ILogger<IndexModel> logger)
     {
         _logger = logger;
     }
