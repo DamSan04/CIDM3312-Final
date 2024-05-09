@@ -4,20 +4,24 @@ using Microsoft.EntityFrameworkCore;
 using CIDM3312_Final.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace CIDM3312_Final.Pages.Teams;
+namespace CIDM3312_Final.Pages;
 
 
-public class IndexModel : PageModel
+public class TeamModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
+    private readonly PlayerContext _context;
+    public List<Team> Teams {get; set;} = default!;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    public TeamModel(PlayerContext context, ILogger<IndexModel> logger)
     {
+        _context = context;
         _logger = logger;
     }
 
     public void OnGet()
     {
+        Teams = _context.Team.ToList();
 
     }
 }

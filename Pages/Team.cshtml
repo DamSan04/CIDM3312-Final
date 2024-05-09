@@ -1,5 +1,5 @@
 @page
-@model CIDM3312_Final.Pages.Teams.IndexModel
+@model TeamModel
 @{
 <table class="table">
     <thread>
@@ -12,7 +12,7 @@
         </tr>
     </thread> 
     <tbody>
-        @foreach (var t in Model.Team) 
+        @foreach (var t in Model.Teams) 
         {
         <tr>
             <th scope="row"></th>
