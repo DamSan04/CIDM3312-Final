@@ -17,13 +17,48 @@ namespace CIDM3312_Final.Pages.Players
         {
             _context = context;
         }
+        public string CsSort { get; set; } = null!;
+        public string CurrentFilter { get; set; } = null!;
+        public string CurrentSort { get; set; } = null!;
 
         public IList<Player> Player { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string sortOrder, string searchString, int? pageIndex)
         {
-            Player = await _context.Player
-                .Include(p => p.Team).ToListAsync();
+            CsSort = String.IsNullOrEmpty(sortOrder) ? "cs_desc" : "";
+            CurrentFilter = searchString;
+            if (searchString != null)
+            {
+                pageIndex = 1;
+            }
+            else
+            {
+                searchString = CurrentFilter;
+            }
+
+            IQueryable<Player> playerKD = from p in _context.Player select p;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                playerKD = playerKD.Where(p => p.PlayerName.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "cs_desc":
+                playerKD = playerKD.OrderByDescending(p => p.AvgCombatScore);
+                break;
+
+                default:
+                playerKD = playerKD.OrderBy(p => p.AvgCombatScore);
+                break;
+
+            }
+            int pageSize = 3;
+            Player = await PaginatedList<Player>.CreateAsync(playerKD.AsNoTracking(), pageIndex ?? 1, pageSize);
+
+            Player = await playerKD.AsNoTracking().ToListAsync();
+
+            Player = await _context.Player.Include(p => p.Team).ToListAsync();
         }
     }
 }

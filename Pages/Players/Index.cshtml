@@ -10,6 +10,16 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +30,10 @@
                 @Html.DisplayNameFor(model => model.Player[0].KDRatio)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Player[0].AvgCombatScore)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.CsSort"
+                asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Player[0].AvgCombatScore)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Player[0].Role)
@@ -64,4 +77,5 @@
 }
     </tbody>
 </table>
+
 
